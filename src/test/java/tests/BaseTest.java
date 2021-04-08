@@ -13,6 +13,10 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
-        requestSpecification = RestAssured.given().baseUri(BASE_URI).contentType(ContentType.JSON).filter(new AllureRestAssured());
+        requestSpecification = RestAssured
+                .given()
+                .baseUri(BASE_URI)
+                .contentType(ContentType.JSON)
+                .filter(new AllureRestAssured());
     }
 }

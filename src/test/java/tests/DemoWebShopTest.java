@@ -27,8 +27,6 @@ public class DemoWebShopTest extends BaseTest {
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .log().body()
-                .body("Success",
-                        equalTo(Boolean.TRUE))
-                .body("Result", equalTo("Thank you for signing up! A verification email has been sent. We appreciate your interest."));
+                .body("Success", equalTo(Boolean.TRUE)).body("Result", equalTo("Thank you for signing up! A verification email has been sent. We appreciate your interest."));
     }
 }
